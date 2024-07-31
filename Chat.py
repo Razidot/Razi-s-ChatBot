@@ -86,7 +86,7 @@ class Process:
 
 print("Hey there, your keyboard is ready")
 talk("Hey there, your keyboard is ready")        
-mic = False
+mic = 1
 def perform():
     global command
     global mic
@@ -96,9 +96,9 @@ def perform():
         command = input("YOU: ")
 
     if command == "mic in":
-        mic = True
-    elif "open" in command:
-        Process.open_website(command)
+        mic += 1
+    # elif "open" in command:
+    #     Process.open_website(command)
     elif "start" in command:
         Process.open_application(command)
     elif "search" in command:
