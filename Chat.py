@@ -86,17 +86,17 @@ class Process:
 
 print("Hey there, your keyboard is ready")
 talk("Hey there, your keyboard is ready")        
-mic = 1
+mic = False
 def perform():
     global command
     global mic
-    if mic > 0:
+    if mic == True:
         command = take_command()
     else:
         command = input("YOU: ")
 
     if command == "mic in":
-        mic += 1
+        mic = True
     # elif "open" in command:
     #     Process.open_website(command)
     elif "start" in command:
